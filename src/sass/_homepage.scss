@@ -1,0 +1,64 @@
+// ****************** Location ******************
+.location {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
+  background-color: rgb(243, 243, 243);
+  font-size: 1.2rem;
+
+  &_icon {
+    margin-right: 1rem;
+  }
+  &_text {
+    font-weight: 700;
+  }
+}
+// ****************** Booking ******************
+
+.booking {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+
+  &_title {
+    margin: 0;
+  }
+  &_description {
+    font-weight: 300;
+    margin: 1.5rem 0;
+  }
+  &_btn {
+    @include button(primary);
+  }
+}
+
+// ****************** Operating ******************
+.operating {
+  padding: 2rem;
+
+  &_title {
+    margin-top: 0;
+  }
+
+  &_list {
+    margin: 0;
+    padding: 0;
+  }
+
+  li::marker{
+    //background-color: $color-primary;
+  }
+
+  &_options {
+    margin: 1rem 0 1rem 0.75rem;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    background-color: #f6f6f6;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  }
+
+  &_icon {
+    margin-right: 1rem;
+    color: #7e7e7e;
+  }
+}
