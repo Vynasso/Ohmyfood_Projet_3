@@ -45,9 +45,10 @@
     padding: 0;
   }
 
-  li::marker{
-    //background-color: $color-primary;
-  }
+  //.operating_list li::after{
+  //  background-color: $color-primary;
+  //  //color: white;
+  //}
 
   &_options {
     margin: 1rem 0 1rem 0.75rem;
@@ -62,3 +63,60 @@
     color: #7e7e7e;
   }
 }
+
+// ****************** Restaurants ******************
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+
+  &_img {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    border: transparent solid 0;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  &_new {
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 50%);
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+  }
+
+  &_footer {
+    padding: 1rem;
+    display: flex;
+    align-items:center;
+  }
+
+  &_title {
+    margin: 0;
+    padding-bottom: 0.5rem;
+    color: $color-dark;
+  }
+
+  &_city {
+    color: $color-dark;
+  }
+}
+
+// ****************** Footer ******************
