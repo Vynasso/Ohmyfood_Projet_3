@@ -1,9 +1,11 @@
+@use "sass:color";
 // ****************** Location ******************
+
 .location {
   display: flex;
   justify-content: center;
   padding: 1.25rem;
-  background-color: rgb(243, 243, 243);
+  background-color: rgba(234,234,234,255);
   font-size: 1.2rem;
 
   &_icon {
@@ -29,10 +31,12 @@
   }
   &_btn {
     @include button(primary);
+    margin-bottom: 1rem;
   }
 }
 
 // ****************** Operating ******************
+
 .operating {
   padding: 2rem;
 
@@ -45,10 +49,13 @@
     padding: 0;
   }
 
-  //.operating_list li::after{
-  //  background-color: $color-primary;
-  //  //color: white;
-  //}
+  .operating_options:hover {
+    background-color: #f5edff;
+
+    i {
+      color: $color-primary;
+    }
+  }
 
   &_options {
     margin: 1rem 0 1rem 0.75rem;
@@ -68,7 +75,7 @@
 
 .restaurants {
   background-color: #f6f6f6;
-  padding: 2rem;
+  padding: 1.4rem;
 }
 
 .cards {
@@ -78,14 +85,14 @@
 }
 
 .card {
-  background-color: white;
+  background-color: $color-light;
   border-radius: 1rem;
   text-decoration: none;
   position: relative;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 
   &_img {
-    height: 12rem;
+    height: 11rem;
     width: 100%;
     object-fit: cover;
     border: transparent solid 0;
@@ -93,19 +100,25 @@
   }
 
   &_new {
-    background-color: $color-tertiary;
-    color: darken($color-tertiary, 50%);
+    position: absolute;
     padding: 0.5rem;
     border-radius: 0.125rem;
-    position: absolute;
     top: 1rem;
     right: 0.75rem;
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 50%);
   }
 
   &_footer {
     padding: 1rem;
     display: flex;
     align-items:center;
+    position: relative;
+
+  }
+
+  &:last-child {
+    margin-bottom: 3rem;
   }
 
   &_title {
@@ -117,6 +130,25 @@
   &_city {
     color: $color-dark;
   }
-}
 
-// ****************** Footer ******************
+  &_heart:hover .far,
+  .card_heart .fas {
+    display: none;
+  }
+  &_heart:hover .fas {
+    display: inline;
+  }
+
+  .full {
+    color: transparent;
+    background-image: linear-gradient(0deg, color.scale($color-primary, $alpha: -10%) 0%, color.scale($color-secondary, $alpha: -10%) 100%);
+    -webkit-background-clip: text;
+  }
+
+  &_icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: black;
+  }
+}
