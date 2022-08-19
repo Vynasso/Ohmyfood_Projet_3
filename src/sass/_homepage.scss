@@ -133,6 +133,10 @@
     color: darken($color-tertiary, 50%);
   }
 
+  &_icon {
+    -webkit-text-stroke: 1px white
+  }
+
   &_footer {
     padding: 1rem;
     display: flex;

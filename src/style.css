@@ -175,6 +175,9 @@ body {
   background-color: #99E2D0;
   color: #1b6150;
 }
+.card_icon {
+  -webkit-text-stroke: 1px white;
+}
 .card_footer {
   padding: 1rem;
   display: flex;
@@ -253,6 +256,10 @@ body {
 }
 .menu_heart:hover .fas {
   display: inline;
+}
+.menu_icon {
+  margin-right: 2rem;
+  -webkit-text-stroke: 1px white;
 }
 .menu .full {
   color: transparent;

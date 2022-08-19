@@ -48,6 +48,11 @@
     display: inline;
   }
 
+  &_icon {
+    margin-right:2rem;
+    -webkit-text-stroke: 1px white
+  }
+
   .full {
     color: transparent;
     background-image: linear-gradient(0deg, color.scale($color-primary, $alpha: -10%) 0%, color.scale($color-secondary, $alpha: -10%) 100%);
