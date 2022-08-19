@@ -106,8 +106,25 @@
     align-items: flex-end;
     flex: 2;
   }
-}
 
+  &:last-child {
+    margin-bottom: 3rem;
+  }
+}
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+
+  &_btn {
+    display: flex;
+    justify-content: center;
+    @include button(primary);
+    width: 50%;
+  }
+}
 
 
 
