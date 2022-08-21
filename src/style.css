@@ -290,6 +290,7 @@ body {
 }
 
 .dish {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem 0 1rem;
@@ -308,6 +309,35 @@ body {
   justify-content: flex-end;
   align-items: flex-end;
   flex: 2;
+}
+.dish_validation {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  opacity: 0;
+  width: 5rem;
+  height: 6rem;
+  right: 0;
+  top: 0;
+}
+.dish:hover .dish_validation {
+  opacity: 1;
+}
+.dish_icon_container {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.dish_icon {
+  color: #99E2D0;
 }
 .dish:last-child {
   margin-bottom: 3rem;

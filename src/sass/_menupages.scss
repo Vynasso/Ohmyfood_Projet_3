@@ -75,11 +75,6 @@
   background-color: #f6f6f6;
   padding: 1rem;
 
-  //h4 {
-  //  border-bottom: 0.2rem solid $color-tertiary;
-  //  padding-bottom: 0.5rem;
-  //}
-
   h4:after {
     content: "";
     display: block;
@@ -90,6 +85,7 @@
 }
 
 .dish {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 1rem 1rem 0 1rem;
@@ -112,10 +108,45 @@
     flex: 2;
   }
 
+  &_validation {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-tertiary;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius:0.75rem;
+    opacity: 0;
+    width: 5rem;
+    height: 6rem;
+    right: 0;
+    top: 0;
+  }
+
+  &:hover &_validation {
+    opacity: 1;
+  }
+
+  &_icon_container {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: $color-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+  }
+
+  &_icon {
+    color: $color-tertiary;
+  }
+
   &:last-child {
     margin-bottom: 3rem;
   }
+
 }
+
 .order {
   display: flex;
   justify-content: center;
