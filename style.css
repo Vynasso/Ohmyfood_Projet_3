@@ -299,9 +299,15 @@ body {
 }
 .dish_title {
   margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .dish_description {
   display: inline-flex;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .dish_price {
   font-weight: bold;
