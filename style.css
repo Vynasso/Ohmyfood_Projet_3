@@ -9,7 +9,7 @@ body {
   justify-content: center;
   height: 30px;
   padding: 1rem;
-  box-shadow: 0 0 0 0.5rem;
+  box-shadow: 0 0 0 0.5rem 0 0 0/25%;
 }
 
 .footer {
@@ -43,6 +43,46 @@ body {
   width: 1.3rem;
 }
 
+@keyframes dishAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes validationSpin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 100vh;
+  inset: 0 0 0 0;
+  z-index: 1;
+  opacity: 0.8;
+  animation: disappear 200ms;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  transform-origin: top;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 .header {
   position: relative;
   z-index: 10;
@@ -290,12 +330,25 @@ body {
 }
 
 .dish {
-  position: relative;
+  display: flex;
+  border-radius: 0.75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.22);
+  animation: dishAnimation 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
+}
+.dish_content {
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem 0 1rem;
-  border-radius: 0.75rem;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.22);
+  padding: 1rem 0 0 1rem;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+.dish:hover .dish_validation {
+  width: 5rem;
 }
 .dish_title {
   margin: 0;
@@ -304,6 +357,7 @@ body {
   overflow: hidden;
 }
 .dish_description {
+  max-width: 100%;
   display: inline-flex;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -314,24 +368,21 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  padding-right: 1rem;
   flex: 2;
 }
 .dish_validation {
-  position: absolute;
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   background-color: #99E2D0;
   border-top-right-radius: 0.75rem;
   border-bottom-right-radius: 0.75rem;
-  opacity: 0;
-  width: 5rem;
+  width: 0;
   height: 6rem;
-  right: 0;
-  top: 0;
-}
-.dish:hover .dish_validation {
-  opacity: 1;
+  transition: width 0.5s;
 }
 .dish_icon_container {
   height: 1.5rem;
@@ -341,6 +392,11 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+  transform: rotate(-280deg) scale(1.2);
+  transition-duration: 0.5s;
+}
+.dish:hover .dish_icon_container {
+  transform: rotate(0) scale(1.2);
 }
 .dish_icon {
   color: #99E2D0;
@@ -377,6 +433,42 @@ body {
 }
 .order_btn a {
   text-decoration: none;
+}
+
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
 }
 
 /*# sourceMappingURL=style.css.map */

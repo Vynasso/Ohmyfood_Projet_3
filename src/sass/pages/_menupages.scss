@@ -85,10 +85,7 @@
 }
 
 .dish {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  padding: 1rem 1rem 0 1rem;
   border-radius: 0.75rem;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -98,6 +95,18 @@
   animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
   animation-fill-mode: both;
 
+  &_content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0 1rem;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  &:hover .dish_validation {
+    width: 5rem;
+  }
+
   &_title {
     margin: 0;
     text-overflow: ellipsis;
@@ -106,6 +115,7 @@
   }
 
   &_description {
+    max-width: 100%;
     display: inline-flex;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -117,46 +127,24 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    padding-right: 1rem;
     flex: 2;
   }
 
   &_validation {
-    position: absolute;
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     background-color: $color-tertiary;
-    //background-color: red;
     border-top-right-radius: 0.75rem;
     border-bottom-right-radius:0.75rem;
-    //padding-left: 20rem;
-    //opacity: 0;
-    width: 5rem;
+    width: 0;
     height: 6rem;
-    //margin-left: 20rem;
-    //right: 0;
-    right: -100px;
-    top: 0;
-    //ease-in-out
-    //transition-duration: 0.8s;
-    //overflow: hidden;
-
-    //-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    //animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
+    transition: width 0.5s;
   }
 
-
-
-  &:hover &_validation {
-    right: 0;
-    //opacity: 1;
-    //margin-right: -1rem;
-//right: 0;
-    transition-duration: 0.5s;
-    //-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    //animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  }
 
   &_icon_container {
     height: 1.5rem;
@@ -166,13 +154,12 @@
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    //animation: validationSpin 0.5s ease-in-out;
-    transform: rotate(-280deg);
+    transform: rotate(-280deg) scale(1.2);
     transition-duration: 0.5s;
   }
 
   &:hover &_icon_container {
-    transform: rotate(0);
+    transform: rotate(0) scale(1.2);
   }
 
   &_icon {
