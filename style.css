@@ -150,10 +150,16 @@ body {
   .operating_list {
     display: flex;
     justify-content: space-between;
+    gap: 3rem;
   }
 }
 .operating ol li {
   list-style-type: none;
+}
+@media (min-width: 64rem) {
+  .operating ol li {
+    width: 100%;
+  }
 }
 .operating .operating_options:hover {
   background-color: #f5edff;
@@ -514,6 +520,10 @@ body {
 
 .delay-8 {
   animation-delay: 0.8s;
+}
+
+.delay-9 {
+  animation-delay: 0.9s;
 }
 
 /*# sourceMappingURL=style.css.map */

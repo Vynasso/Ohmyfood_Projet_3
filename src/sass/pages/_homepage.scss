@@ -82,11 +82,15 @@
     @media (min-width: 64rem){
       display: flex;
       justify-content: space-between;
+      gap: 3rem;
     }
   }
 
   ol li {
     list-style-type: none;
+    @media (min-width: 64rem) {
+      width: 100%;
+    }
   }
 
   .operating_options:hover {
