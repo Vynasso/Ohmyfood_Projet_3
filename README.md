@@ -59,3 +59,14 @@ sur desktop au lieu du clic. Si l’intitulé du plat est trop long, il devra ê
 des points de suspension. Un exemple de l’effet attendu est fourni.
 
 # Guide d'installation
+
+
+```bash
+    git@github.com:Vynasso/Ohmyfood_Projet_3.git
+```
+
+Installer les dépendances
+
+```bash
+  npm install
+```
