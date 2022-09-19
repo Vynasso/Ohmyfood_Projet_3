@@ -9,7 +9,7 @@ body {
   justify-content: center;
   height: 30px;
   padding: 1rem;
-  box-shadow: 0 0 0 0.5rem 0 0 0/25%;
+  box-shadow: 0 0 0 0.5rem rgb(0 0 0 / 25%) ;
 }
 
 .footer {
@@ -241,7 +241,7 @@ body {
 }
 @media (min-width: 64rem) {
   .card {
-    width: 100%;
+    max-width: 70%;
     flex: 1;
   }
 }
@@ -379,6 +379,18 @@ body {
   width: 2.4rem;
   border: 2px solid #99E2D0;
 }
+@media (min-width: 64rem) {
+  .restaurant {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+  }
+}
+
+.dish-wrapper {
+  display: grid;
+  gap: 1rem;
+}
 
 .dish {
   display: flex;
@@ -484,6 +496,11 @@ body {
 }
 .order_btn a {
   text-decoration: none;
+}
+@media (min-width: 64rem) {
+  .order {
+    max-width: 50%;
+  }
 }
 
 .delay-0 {

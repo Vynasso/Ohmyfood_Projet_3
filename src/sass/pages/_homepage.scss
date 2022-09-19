@@ -186,7 +186,8 @@
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 
   @media (min-width: 64rem){
-    width: 100%;
+    //width: 100%;
+    max-width: 70%;
     flex: 1;
   }
 
