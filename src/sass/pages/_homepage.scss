@@ -160,7 +160,7 @@
   gap: 1rem;
 
   @media (min-width: 64rem){
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -186,8 +186,7 @@
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 
   @media (min-width: 64rem){
-    //width: 100%;
-    max-width: 70%;
+    width: 100%;
     flex: 1;
   }
 
