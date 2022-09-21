@@ -92,8 +92,8 @@
 }
 
 .dish-wrapper {
-  display: grid;
-  gap: 1rem;
+  //display: grid;
+  //gap: 1rem;
 }
 
 .dish {
@@ -106,6 +106,8 @@
   animation: dishAnimation .6s;
   animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
   animation-fill-mode: both;
+
+  margin-bottom: 1rem;
 
 
   &_content {
