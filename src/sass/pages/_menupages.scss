@@ -71,7 +71,8 @@
 
 
 .restaurant {
-  display: flex;
+  //display: flex;
+  display: grid;
   flex-direction: column;
   gap: 1rem;
   background-color: #f6f6f6;
@@ -93,7 +94,6 @@
 
 .dish-wrapper {
   //display: grid;
-  //gap: 1rem;
 }
 
 .dish {
