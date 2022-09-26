@@ -155,8 +155,8 @@
     align-items: center;
     overflow: hidden;
     background-color: $color-tertiary;
-    border-top-right-radius: 0.75rem;
-    border-bottom-right-radius:0.75rem;
+    //border-top-right-radius: 0.75rem;
+    //border-bottom-right-radius:0.75rem;
     width: 0;
     height: 6rem;
     transition: width 0.5s;
@@ -200,7 +200,6 @@
     display: flex;
     justify-content: center;
     @include button(primary);
-    //width: 50%;
   }
 }
 
