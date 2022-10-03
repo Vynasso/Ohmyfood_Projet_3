@@ -287,12 +287,11 @@ body {
 }
 .card_heart:hover .far,
 .card .card_heart .fas {
-  display: none;
+  opacity: 0;
 }
 .card_heart:hover .fas {
-  display: inline;
-}
-.card .full {
+  opacity: 1;
+  transition: 2s;
   color: transparent;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
   -webkit-background-clip: text;
@@ -342,19 +341,23 @@ body {
 }
 .menu_heart:hover .far,
 .menu .menu_heart .fas {
-  display: none;
+  opacity: 0;
 }
 .menu_heart:hover .fas {
-  display: inline;
+  opacity: 1;
+  transition: 2s;
+  color: transparent;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  -webkit-background-clip: text;
+}
+@media (max-width: -5rem) {
+  .menu_heart i {
+    margin-right: 1rem;
+  }
 }
 .menu_icon {
   margin-right: 2rem;
   -webkit-text-stroke: 1px white;
-}
-.menu .full {
-  color: transparent;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
-  -webkit-background-clip: text;
 }
 .menu_icon {
   position: absolute;
@@ -385,6 +388,16 @@ body {
     column-gap: 1rem;
   }
 }
+@media (min-width: 20rem) and (max-width: 28rem) {
+  .dish-wrapper {
+    width: 25.5rem;
+  }
+}
+@media (min-width: 20rem) and (max-width: 22rem) {
+  .dish-wrapper {
+    width: 20rem;
+  }
+}
 
 .dish {
   display: flex;
@@ -404,9 +417,24 @@ body {
   padding: 1rem 0 0 1rem;
   flex-basis: 100%;
   max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.dish:hover .dish_validation {
-  width: 5rem;
+.dish_detail {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.dish_test3 {
+  width: 50px;
+  padding-top: 1.9rem;
+  font-weight: bold;
+}
+.dish_price_information {
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 .dish_title {
   margin: 0;
@@ -441,6 +469,9 @@ body {
   width: 0;
   height: 6rem;
   transition: width 0.5s;
+}
+.dish:hover .dish_validation {
+  width: 5rem;
 }
 .dish_icon_container {
   height: 1.5rem;
@@ -493,42 +524,52 @@ body {
 }
 
 .delay-0 {
+  max-width: 100%;
   animation-delay: 0s;
 }
 
 .delay-1 {
+  max-width: 100%;
   animation-delay: 0.1s;
 }
 
 .delay-2 {
+  max-width: 100%;
   animation-delay: 0.2s;
 }
 
 .delay-3 {
+  max-width: 100%;
   animation-delay: 0.3s;
 }
 
 .delay-4 {
+  max-width: 100%;
   animation-delay: 0.4s;
 }
 
 .delay-5 {
+  max-width: 100%;
   animation-delay: 0.5s;
 }
 
 .delay-6 {
+  max-width: 100%;
   animation-delay: 0.6s;
 }
 
 .delay-7 {
+  max-width: 100%;
   animation-delay: 0.7s;
 }
 
 .delay-8 {
+  max-width: 100%;
   animation-delay: 0.8s;
 }
 
 .delay-9 {
+  max-width: 100%;
   animation-delay: 0.9s;
 }
 

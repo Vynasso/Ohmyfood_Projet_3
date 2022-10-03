@@ -41,23 +41,35 @@
 
   &_heart:hover .far,
   .menu_heart .fas {
-    display: none;
+    opacity: 0;
   }
 
   &_heart:hover .fas {
-    display: inline;
+    opacity: 1;
+    transition: 2s;
+    color: transparent;
+    background-image: linear-gradient(0deg, color.scale($color-primary, $alpha: -10%) 0%, color.scale($color-secondary, $alpha: -10%) 100%);
+    -webkit-background-clip: text;
+  }
+
+  &_heart i {
+    @media (max-width: 20rem - 25rem){
+      margin-right: 1rem
+    }
   }
 
   &_icon {
     margin-right:2rem;
-    //-webkit-text-stroke: 1px white
+    -webkit-text-stroke: 1px white
   }
 
-  .full {
-    color: transparent;
-    background-image: linear-gradient(0deg, color.scale($color-primary, $alpha: -10%) 0%, color.scale($color-secondary, $alpha: -10%) 100%);
-    //-webkit-background-clip: text;
-  }
+  //.full {
+  //  //opacity: 1;
+  //  transition: 2s;
+  //  color: transparent;
+  //  background-image: linear-gradient(0deg, color.scale($color-primary, $alpha: -10%) 0%, color.scale($color-secondary, $alpha: -10%) 100%);
+  //  -webkit-background-clip: text;
+  //}
 
   &_icon {
     position: absolute;
@@ -90,10 +102,21 @@
     grid-template-columns: repeat(3,1fr);
     column-gap: 1rem;
   }
+
+  @media (min-width: 20rem){
+
+  }
 }
 
 .dish-wrapper {
-  //display: grid;
+  @media (min-width: 20rem) and (max-width: 28rem){
+    width: 25.5rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 22rem){
+    width: 20rem;
+  }
+
 }
 
 .dish {
@@ -109,17 +132,33 @@
 
   margin-bottom: 1rem;
 
-
   &_content {
     display: flex;
     flex-direction: column;
     padding: 1rem 0 0 1rem;
     flex-basis: 100%;
     max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
-  &:hover .dish_validation {
-    width: 5rem;
+  &_detail{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &_test3{
+    width: 50px;
+    padding-top: 1.9rem;
+    font-weight: bold;
+  }
+
+  &_price_information {
+    display: flex;
+    align-items: center;
+    align-content: center;
   }
 
   &_title {
@@ -155,13 +194,14 @@
     align-items: center;
     overflow: hidden;
     background-color: $color-tertiary;
-    //border-top-right-radius: 0.75rem;
-    //border-bottom-right-radius:0.75rem;
     width: 0;
     height: 6rem;
     transition: width 0.5s;
   }
 
+  &:hover .dish_validation {
+    width: 5rem;
+  }
 
   &_icon_container {
     height: 1.5rem;
@@ -186,7 +226,6 @@
   &:last-child {
     margin-bottom: 3rem;
   }
-
 }
 
 .order {
@@ -205,6 +244,7 @@
 
 @for $i from 0 to 10 {
   .delay-#{$i} {
+    max-width: 100%;
     animation-delay: #{$i/10}s;
   }
 }
