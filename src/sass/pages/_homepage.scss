@@ -56,6 +56,10 @@
     @include button(primary);
     margin-bottom: 1rem;
   }
+  @media (max-width: 22.9rem){
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 // ****************** Operating ******************
@@ -75,6 +79,9 @@
       display: flex;
       justify-content: space-between;
       gap: 3rem;
+    }
+    @media (max-width: 22.9rem){
+      white-space: nowrap;
     }
   }
 

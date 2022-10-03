@@ -53,7 +53,7 @@
   }
 
   &_heart i {
-    @media (max-width: 20rem - 25rem){
+    @media (max-width: 20rem){
       margin-right: 1rem
     }
   }
@@ -117,6 +117,9 @@
     width: 20rem;
   }
 
+  //@media (min-width: 75rem) and (max-width: 60rem){
+  //  width: 20rem;
+  //}
 }
 
 .dish {
